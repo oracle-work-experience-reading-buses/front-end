@@ -1,3 +1,26 @@
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+	
+	.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
 *
 {
 	margin: 0;
@@ -18,9 +41,51 @@ body
 	top: 0;
 	z-index: 10;
 }
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+#navbarNav {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+#navbarNav {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+h5 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+h5 {
+    font-size: 10px;
+  }
+}
+
+.lineimg
+{
+	margin-top: -17px;
+    width: 100%;
+    height: 100%;
+}
+
 .navbar
 {
-	background-image: linear-gradient(to right, #6c5ce7, #6c5ce7);
+	background-image: linear-gradient(to right, #6c5ce7, #c73543);
 	padding: 0 !important;
 }
 .navbar-logo img
@@ -57,20 +122,25 @@ body
 
 #mainbanner
 {
-	background-image: linear-gradient(to right, #6c5ce7, #6c5ce7);
+	background-image: linear-gradient(to right, #6c5ce7, #c73543);
 	color: #fff;
 	padding-top: 5%;
 }
+
+
 .maintitle {
     font-size: 50px;
     font-weight: 600;
-    margin-top: 34px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     text-align: center;
     text-shadow: 1.5px 1.5px #34495e;
+	color: #6c5ce7
 }
 .maintext
 {
 	text-align: center;
+	color:antiquewhite
 }
 
 .logomain
@@ -97,7 +167,7 @@ button.btn.btn-primary
     display: block;
     max-width: 500px;
     margin: auto;
-	background-image: linear-gradient(to right, #6c5ce7, #6c5ce7);
+	background-image: linear-gradient(to right, #6c5ce7, #c73543);
 }
 #mainabout
 {
@@ -107,7 +177,7 @@ button.btn.btn-primary
 }
 #mainfooter
 {
-	background-image: linear-gradient(to right, #6c5ce7, #6c5ce7);
+	background-image: linear-gradient(to right, #6c5ce7, #c73543);
 	color: #fff;
 }
 .footerimg
@@ -134,7 +204,6 @@ button.btn.btn-primary
     text-align: center;
     padding-top: 7px;
     border-radius: 2px;
-    background-image: linear-gradient(to right, #6c5ce7, #6c5ce7);
 }
 hr
 {
@@ -163,16 +232,41 @@ a.btn.btn-primary {
 }
 #buses
 {
-	margin-left: 20px;
-	margin-bottom: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+    padding-bottom: 20px;
+}
+#buses h3
+{
+	text-align: center;
+}
+#buses p {
+    text-align: center;
+}
+.img101 {
+	display: flex;
+    width: 60%;
+    height: 60%;
+	margin-left: 150px
+}
+.card-title
+{
+    padding-top: 20px;
+}
+.card-text2
+{
+    margin-bottom: 44px;
+}
+.card-text
+{
+    text-align: left;
 }
 
+#mail-link {
+    text-decoration: none;
+    color: white;
+}
 
-
-
-
-
-
-
-
-
+#mail-link :hover {
+    text-decoration: underline;
+}
