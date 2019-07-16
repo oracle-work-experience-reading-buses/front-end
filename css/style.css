@@ -36,9 +36,17 @@ body
 	font-family: font;
 }
 .card-deck .card a {
-    text-decoration: none
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    background-color: #3498db;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    
 }
-
+.card-deck .card a:hover {background-color:#2980b9}
 #navigation-bar
 {
 	position: sticky;
@@ -111,6 +119,17 @@ h5 {
 .navbar-nav li
 {
 	padding: 0 10px;
+}
+.navbar-nav li a
+{
+	color: #fff !important;
+	font-weight: 600;
+	float: right;
+	text-align: left;
+}
+.navbar-nav li a:hover {
+    color: #D8D8D8!important;
+    transition: all 0.5s;
 }
 .navbar-nav li a
 {
