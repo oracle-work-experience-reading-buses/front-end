@@ -131,11 +131,11 @@ h5 {
 .maintitle {
     font-size: 50px;
     font-weight: 600;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 57px;
+    margin-bottom: 22px;
     text-align: center;
     text-shadow: 1.5px 1.5px #34495e;
-	color: #6c5ce7
+    color: #fff;
 }
 .maintext
 {
@@ -153,10 +153,11 @@ h5 {
 	float: right;
 }
 
-#mainbanner a
+#mainbanner
 {
+	background-image: linear-gradient(to right, #6c5ce7, #c73543);
 	color: #fff;
-	text-decoration: none;
+	padding-top: 5%;
 }
 .bottomimg
 {
