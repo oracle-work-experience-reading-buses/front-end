@@ -1,0 +1,986 @@
+<!doctype html>
+<html>
+<head>
+<script>
+	
+	</script>
+    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+	const el = document.querySelector("#module");
+
+el.addEventListener("mousemove", (e) => {
+  el.style.backgroundPositionX = -e.offsetX + "px";
+  el.style.backgroundPositionY = -e.offsetY + "px";
+});
+</script>
+<style>
+
+
+
+	.module {
+  background-image: url("Cat.jpg");
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+	
+	.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: comfortaa;
+}
+@font-face {
+  font-family: comfortaa;
+  src: url(../fonts/comfortaa.ttf);
+}
+body
+{
+	font-family: font;
+}
+.lineimg
+{
+	margin-top: -17px;
+    width: 100%;
+    height: 100%;
+}
+#navigation-bar
+{
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+.navbar
+{
+	background-image: linear-gradient(to right, #6c5ce7, #c73543);
+	padding: 0 !important;
+}
+.navbar-logo img
+{
+	height: 80px;
+	padding-left: 20px;
+}
+.navbar-text img
+{
+	height: 40px;
+	padding-left: 5px;
+}
+.navbar-nav li
+{
+	padding: 0 10px;
+}
+.navbar-nav li a
+{
+	color: #fff !important;
+	font-weight: 600;
+	float: right;
+	text-align: left;
+}
+.fa-bars
+{
+	color: #fff;
+	font-size: 30px !important;
+}
+.navbar-toggler
+{
+	outline: none !important;
+}
+
+
+#mainbanner
+{
+	background-image: linear-gradient(to right, #6c5ce7, #c73543);
+	color: #fff;
+	padding-top: 5%;
+}
+.maintitle {
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 34px;
+    text-align: center;
+    text-shadow: 1.5px 1.5px #34495e;
+	color: #6c5ce7
+}
+.maintext
+{
+	text-align: center;
+	color:antiquewhite
+}
+
+.logomain
+{
+	width: 50px;
+	margin: 15px;
+}
+.text-center
+{
+	float: right;
+}
+
+#mainbanner a
+{
+	color: #fff;
+	text-decoration: none;
+}
+.bottomimg
+{
+	width: 100%;
+}
+button.btn.btn-primary 
+{
+    display: block;
+    max-width: 500px;
+    margin: auto;
+	background-image: linear-gradient(to right, #6c5ce7, #c73543);
+}
+#mainabout
+{
+	background: #f8f9fa;
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+#mainfooter
+{
+	background-image: linear-gradient(to right, #6c5ce7, #c73543);
+	color: #fff;
+}
+.footerimg
+{
+	width: 100%;
+}
+.footerbox
+{
+	padding: 20px;
+}
+
+.footerbox img
+{
+	width: 120px;
+	margin-bottom: 20px;
+}
+.footerbox .fa
+{
+    margin-right: 8px;
+    font-size: 25px;
+    height: 1px;
+    width: 25px;
+    margin-left: -30px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
+}
+hr
+{
+	background-color: #fff;
+}
+.copyright
+{
+	margin-bottom: 0;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+a.btn.btn-primary {
+    max-width: 115;
+    display: block;
+    margin: auto;
+}
+.card-title
+{
+	text-align: center;
+}
+
+.card-text
+{
+	text-align: center;
+}
+#buses
+{
+	margin-left: 20px;
+	margin-bottom: 20px;
+.module {
+  --x: 0px;
+  --y: 0px;
+  background-image: url(https://images.unsplash.com/photo-1499162526249-f5b8b9ba9923?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=865bf5c0b77ceb22e88de9fd41c5a671);
+  background-size: 1000px;
+  background-position: var(--x) var(--y);
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+}
+
+.test3
+    {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    #666,
+    #222
+  );
+}
+}
+</style>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<section id="navigation-bar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="nav-item active"></a>
+  <a class="navbar-logo" href="Index.html"><img src="images/logo.png" alt="Logo"></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   <i class="fa fa-bars" alt="Bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+	
+	<li>
+        <a class="nav-link" href="Bus-Selection.html">Bus Selection</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="team.html">Plan Your Journey</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Service.html">Service Updates</a>
+      </li>	
+    </ul>
+  </div>
+</nav>
+    <img class="lineimg" src="images/line.PNG"">
+</section>
+
+<p class="maintitle">Reading Buses</p>	
+<div class="module" id="module"></div>
+
+<iframe width="1500px" height="440px" id='mapcanvas' src='https://maps.google.com/maps?q=reading,%20united%20kingdom&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed' 
+frameborder='0' scrolling='no' marginheight='0' marginwidth='0'>
+<div class="zxos8_gm"><a href="https://www.onecompare.com">OneCompare.com</a></div><div style='overflow:hidden;'><div id='gmap_canvas' style='height:440px;width:1000px;'></div><div><a class="center"></a></div></div><div><small>Powered by <a href="https://www.embedgooglemap.co.uk">Embed Google Map</a></small></div></iframe>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<section id="test3">
+    
+<table id="test3">
+  <tr>
+      <th>Bus stop</th>
+      <th>Time</th>
+      <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  <th>Time</th>
+	  
+  </tr>
+  <tr>
+      <td>The Green</td>
+      <td>N/A</td>
+      <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>N/A</td>
+	  <td>22:08</td>
+	  <td>N/A</td>
+	  <td>23:08</td>
+	  
+	  
+	  
+  </tr>
+  <tr>
+      <td>Newbury Wharf</td>
+      <td>05:00</td>
+      <td>05:25</td>
+	  <td>05:55</td>
+	  <td>06:25</td>
+	  <td>06:55</td>
+	  <td>07:25</td>
+	  <td>07:55</td>
+	  <td>08:25</td>
+	  <td>08:55</td>
+	  <td>09:25</td>
+	  <td>09:55</td>
+	  <td>10:25</td>
+	  <td>10:55</td>
+	  <td>12:25</td>
+	  <td>12:55</td>
+	  <td>13:25</td>
+	  <td>13:55</td>
+	  <td>14:25</td>
+	  <td>14:55</td>
+	  <td>15:25</td>
+	  <td>16:05</td>
+	  <td>16:35</td>
+	  <td>17:05</td>
+	  <td>17:35</td>
+	  <td>18:05</td>
+	  <td>18:35</td>
+	  <td>19:05</td>
+	  <td>19:25</td>
+	  <td>20:25</td>
+	  <td>21:35</td>
+	  <td>N/A</td>
+	  <td>22:35</td>
+	  <td>N/A</td>
+	  
+	  
+	  
+	  
+  </tr>
+  <tr>
+    <td>Park Way</td>
+      <td>05:02</td>
+      <td>05:27</td>
+	  <td>05:57</td>
+	  <td>06:27</td>
+	  <td>06:57</td>
+	  <td>07:27</td>
+	  <td>07:57</td>
+	  <td>08:27</td>
+	  <td>08:58</td>
+	  <td>09:28</td>
+	  <td>09:58</td>
+	  <td>10:28</td>
+	  <td>10:58</td>
+	  <td>11:28</td>
+	  <td>11:58</td>
+	  <td>12:28</td>
+	  <td>12:58</td>
+	  <td>13:28</td>
+	  <td>13:58</td>
+	  <td>14:28</td>
+	  <td>14:58</td>
+	  <td>15:28</td>
+	  <td>16:08</td>
+	  <td>16:38</td>
+	  <td>17:08</td>
+	  <td>17:38</td>
+	  <td>18:07</td>
+	  <td>18:37</td>
+	  <td>19:07</td>
+	  <td>19:27</td>
+	  <td>20:27</td>
+	  <td>21:37</td>
+	  <td>N/A</td>
+	  <td>22:37</td>
+	  <td>N/A</td>
+  </tr>
+  <tr>
+	  
+      <td>Birchwood Road</td>
+      <td>05:09</td>
+      <td>05:34</td>
+	  <td>06:05</td>
+	  <td>06:36</td>
+	  <td>07:37</td>
+	  <td>08:10</td>
+	  <td>08:40</td>
+	  <td>09:09</td>
+	  <td>09:39</td>
+	  <td>10:09</td>
+	  <td>10:39</td>
+	  <td>11:09</td>
+	  <td>11:39</td>
+	  <td>12:09</td>
+	  <td>12:39</td>
+	  <td>13:09</td>
+	  <td>13:39</td>
+	  <td>14:09</td>
+	  <td>14:39</td>
+	  <td>15:09</td>
+	  <td>15:39</td>
+	  <td>16:19</td>
+	  <td>16:52</td>
+	  <td>17:22</td>
+	  <td>17:53</td>
+	  <td>18:19</td>
+	  <td>18:47</td>
+	  <td>19:17</td>
+	  <td>19:35</td>
+	  <td>20:35</td>
+	  <td>21:45</td>
+	  <td>N/A</td>
+	  <td>22:45</td>
+	  <td>N/A</td>
+  </tr>
+
+	
+  <tr>
+      <td>West Berkshite  Community Hopsital</td>
+      <td>05:11</td>
+      <td>05:36</td>
+	  <td>06:08</td>
+	  <td>06:39</td>
+	  <td>07:10</td>
+	  <td>07:40</td>
+	  <td>08:14</td>
+	  <td>08:44</td>
+	  <td>09:13</td>
+	  <td>09:43</td>
+	  <td>10:13</td>
+	  <td>10:43</td>
+	  <td>11:13</td>
+	  <td>12:13</td>
+	  <td>12:43</td>
+	  <td>13:13</td>
+	  <td>14:43</td>
+	  <td>14:43</td>
+	  <td>15:13</td>
+	  <td>15:43</td>
+	  <td>16:23</td>
+	  <td>16:56</td>
+	  <td>17:26</td>
+	  <td>17:56</td>
+	  <td>18:22</td>
+	  <td>18:50</td>
+	  <td>19:20</td>
+	  <td>19:38</td>
+	  <td>20:38</td>
+	  <td>21:48</td>
+	  <td>N/A</td>
+	  <td>22:48</td>
+	  <td>N/A</td>
+  </tr>
+	
+	
+  <tr>
+      <td>Thatcham, Broadway</td>
+      <td>05:16</td>
+      <td>05:41</td>
+	  <td>06:13</td>
+	  <td>06:45</td>
+	  <td>07:18</td>
+	  <td>07:48</td>
+	  <td>08:23</td>
+	  <td>08:53</td>
+	  <td>09:22</td>
+	  <td>09:51</td>
+	  <td>10:21</td>
+	  <td>10:51</td>
+	  <td>11:21</td>
+	  <td>11:51</td>
+	  <td>12:21</td>
+	  <td>12:51</td>
+	  <td>13:21</td>
+	  <td>13:51</td>
+	  <td>14:21</td>
+	  <td>14:51</td>
+	  <td>15:21</td>
+	  <td>15:51</td>
+	  <td>16:31</td>
+	  <td>17:04</td>
+	  <td>17:34</td>
+	  <td>18:04</td>
+	  <td>18:30</td>
+	  <td>18:58</td>
+	  <td>19:28</td>
+	  <td>19:45</td>
+	  <td>20:45</td>
+	  <td>21:55</td>
+	  <td>N/A</td>
+	  <td>22:55</td>
+	  <td>N/A</td>
+  </tr>
+	
+   <tr>
+    <td>Cropper Close, Falmouth Way</td>
+       <td>05:20</td>
+       <td>05:45</td>
+	   <td>06:18</td>
+	   <td>06:51</td>
+	   <td>07:24</td>
+	   <td>07:54</td>
+	   <td>08:31</td>
+	   <td>09:01</td>
+	   <td>09:29</td>
+	   <td>09:58</td>
+	   <td>10:28</td>
+	   <td>10:58</td>
+	   <td>11:28</td>
+	   <td>11:58</td>
+	   <td>12:28</td>
+	   <td>12:58</td>
+	   <td>13:28</td>
+	   <td>13:58</td>
+	   <td>14:28</td>
+	   <td>14:58</td>
+	   <td>15:28</td>
+	   <td>15:58</td>
+	   <td>16:38</td>
+	   <td>17:11</td>
+	   <td>17:41</td>
+	   <td>18:10</td>
+	   <td>18:36</td>
+	   <td>19:04</td>
+	   <td>19:34</td>
+	   <td>19:50</td>
+	   <td>20:50</td>
+	   <td>N/A</td>
+	   <td>N/A</td>
+	   <td>N/A</td>
+	   <td>N/A</td>
+  </tr>
+
+	<tr>
+    <td>The Angel, Woolhampton</td>
+        <td>05:25</td>
+        <td>05:50</td>
+		<td>06:23</td>
+		<td>06:57</td>
+		<td>07:31</td>
+		<td>08:01</td>
+		<td>08:37</td>
+		<td>09:07</td>
+		<td>09:35</td>
+		<td>10:04</td>
+		<td>10:34</td>
+		<td>11:04</td>
+		<td>11:34</td>
+		<td>12:04</td>
+		<td>12:34</td>
+		<td>13:04</td>
+		<td>13:34</td>
+		<td>14:04</td>
+		<td>14:34</td>
+		<td>15:04</td>
+		<td>15:35</td>
+		<td>16:05</td>
+		<td>16:45</td>
+		<td>17:18</td>
+		<td>17:48</td>
+		<td>18:17</td>
+		<td>18:43</td>
+		<td>19:10</td>
+		<td>19:40</td>
+		<td>19:56</td>
+		<td>20:56</td>
+		<td>N/A</td>
+		<td>N/A</td>
+		<td>N/A</td>
+		<td>N/A</td>
+  </tr>
+	
+	<tr>
+        <td>Beenham Turn</td>
+        <td>05:30</td>
+        <td>05:55</td>
+		<td>06:28</td>
+		<td>07:02</td>
+		<td>07:38</td>
+		<td>08:08</td>
+		<td>08:44</td>
+		<td>09:14</td>
+		<td>09:41</td>
+		<td>10:10</td>
+		<td>10:40</td>
+		<td>11:10</td>
+		<td>11:40</td>
+		<td>12:10</td>
+		<td>12:40</td>
+		<td>13:10</td>
+		<td>13:40</td>
+		<td>14:10</td>
+		<td>14:40</td>
+		<td>15:10</td>
+		<td>15:41</td>
+		<td>16:11</td>
+		<td>16:51</td>
+		<td>17:24</td>
+		<td>17:54</td>
+		<td>18:23</td>
+		<td>18:49</td>
+		<td>19:16</td>
+		<td>19:46</td>
+		<td>20:01</td>
+		<td>21:01</td>
+		<td>N/A</td>
+		<td>N/A</td>
+		<td>N/A</td>
+		<td>N/A</td>
+  </tr>
+	
+	<tr>
+        <td>The Crown, Theale</td>
+        <td>05:35</td>
+        <td>06:00</td>
+		<td>06:33</td>
+		<td>07:08</td>
+		<td>07:46</td>
+		<td>08:16</td>
+		<td>08:52</td>
+		<td>09:22</td>
+		<td>09:49</td>
+		<td>10:16</td>
+		<td>10:46</td>
+		<td>11:16</td>
+		<td>11:46</td>
+		<td>12:16</td>
+		<td>12:46</td>
+		<td>13:16</td>
+		<td>13:46</td>
+		<td>14:16</td>
+		<td>14:46</td>
+		<td>15:16</td>
+		<td>15:47</td>
+		<td>16:17</td>
+		<td>16:57</td>
+		<td>17:31</td>
+		<td>18:01</td>
+		<td>18:30</td>
+		<td>18:55</td>
+		<td>19:22</td>
+		<td>19:52</td>
+		<td>20:07</td>
+		<td>21:07</td>
+		<td>N/A</td>
+		<td>22:14</td>
+		<td>N/A</td>
+		<td>23:13</td>
+  </tr>
+	
+	<tr>
+        <td>Arlington Business Park</td>
+        <td>05:37</td>
+        <td>06:02</td>
+		<td>06:35</td>
+		<td>07:11</td>
+		<td>07:49</td>
+		<td>08:19</td>
+		<td>08:55</td>
+		<td>09:25</td>
+		<td>09:52</td>
+		<td>10:19</td>
+		<td>10:49</td>
+		<td>11:19</td>
+		<td>11:49</td>
+		<td>12:19</td>
+		<td>12:49</td>
+		<td>13:19</td>
+		<td>13:49</td>
+		<td>14:19</td>
+		<td>14:49</td>
+		<td>15:19</td>
+		<td>15:50</td>
+		<td>16:20</td>
+		<td>17:00</td>
+		<td>17:34</td>
+		<td>18:04</td>
+		<td>18:33</td>
+		<td>18:58</td>
+		<td>19:25</td>
+		<td>19:55</td>
+		<td>20:10</td>
+		<td>21:10</td>
+		<td>N/A</td>
+		<td>22:17</td>
+		<td>N/A</td>
+		<td>23:15</td>
+  </tr>
+	
+	<tr>
+        <td>Calcot (Sainsbury's)</td>
+        <td>05:40</td>
+        <td>06:05</td>
+		<td>06:38</td>
+		<td>07:15</td>
+		<td>07:53</td>
+		<td>08:23</td>
+		<td>08:59</td>
+		<td>09:29</td>
+		<td>09:56</td>
+		<td>10:23</td>
+		<td>10:53</td>
+		<td>11:23</td>
+		<td>11:53</td>
+		<td>12:23</td>
+		<td>12:53</td>
+		<td>13:23</td>
+		<td>13:53</td>
+		<td>14:23</td>
+		<td>14:53</td>
+		<td>15:23</td>
+		<td>15:55</td>
+		<td>16:25</td>
+		<td>17:05</td>
+		<td>17:39</td>
+		<td>18:09</td>
+		<td>18:37</td>
+		<td>19:02</td>
+		<td>19:28</td>
+		<td>19:58</td>
+		<td>20:13</td>
+		<td>21:13</td>
+		<td>N/A</td>
+		<td>22:20</td>
+		<td>N/A</td>
+		<td>23:18</td>
+  </tr>
+	
+	<tr>
+        <td>Greenwood Road</td>
+        <td>05:44</td>
+        <td>06:09</td>
+		<td>06:43</td>
+		<td>07:23</td>
+		<td>08:02</td>
+		<td>08:32</td>
+		<td>09:08</td>
+		<td>09:38</td>
+		<td>10:03</td>
+		<td>10:30</td>
+		<td>11:00</td>
+		<td>11:30</td>
+		<td>12:00</td>
+		<td>12:30</td>
+		<td>13:00</td>
+		<td>13:30</td>
+		<td>14:00</td>
+		<td>14:30</td>
+		<td>15:00</td>
+		<td>15:30</td>
+		<td>16:03</td>
+		<td>16:33</td>
+		<td>17:13</td>
+		<td>17:47</td>
+		<td>18:17</td>
+		<td>18:44</td>
+		<td>19:08</td>
+		<td>19:33</td>
+		<td>20:03</td>
+		<td>20:17</td>
+		<td>21:17</td>
+		<td>N/A</td>
+		<td>22:24</td>
+		<td>N/A</td>
+		<td>23:22</td>
+  </tr>
+	
+	<tr>
+        <td>Bath Road, Burghfield Road</td>
+        <td>05:46</td>
+        <td>06:11</td>
+		<td>06:45</td>
+		<td>07:26</td>
+		<td>08:06</td>
+		<td>08:36</td>
+		<td>09:11</td>
+		<td>09:41</td>
+		<td>10:06</td>
+		<td>10:33</td>
+		<td>11:03</td>
+		<td>11:33</td>
+		<td>12:03</td>
+		<td>12:33</td>
+		<td>13:03</td>
+		<td>13:33</td>
+		<td>14:03</td>
+		<td>14:33</td>
+		<td>15:03</td>
+		<td>15:33</td>
+		<td>16:06</td>
+		<td>16:36</td>
+		<td>17:16</td>
+		<td>17:50</td>
+		<td>18:20</td>
+		<td>18:46</td>
+		<td>19:10</td>
+		<td>19:35</td>
+		<td>20:05</td>
+		<td>20:19</td>
+		
+		<td>N/A</td>
+		<td>22:26</td>
+		<td>N/A</td>
+		<td>23:24</td>d>
+  </tr>
+	
+	<tr>
+        <td>Blagrave Street</td>
+        <td>05:57</td>
+        <td>06:22</td>
+		<td>06:59</td>
+		<td>07:43</td>
+		<td>08:27</td>
+		<td>08:57</td>
+		<td>09:27</td>
+		<td>09:57</td>
+		<td>10:21</td>
+		<td>10:48</td>
+		<td>11:18</td>
+		<td>11:48</td>
+		<td>12:18</td>
+		<td>12:48</td>
+		<td>13:18</td>
+		<td>13:48</td>
+		<td>14:18</td>
+		<td>14:48</td>
+		<td>15:18</td>
+		<td>15:50</td>
+		<td>16:25</td>
+		<td>16:55</td>
+		<td>17:35</td>
+		<td>18:08</td>
+		<td>18:38</td>
+		<td>19:02</td>
+		<td>19:25</td>
+		<td>19:48</td>
+		<td>20:18</td>
+		<td>20:31</td>
+		<td>21:31</td>
+		<td>N/A</td>
+		<td>22:37</td>
+		<td>N/A</td>
+		<td>23:35</td>
+  </tr>
+
+
+</table>
+	</style>
+    </section>
+	<img src="Timetable.pdf">
+<p> </p>
+
+<section id="mainfooter">
+<div class="container">
+<div class="row">
+<div class="colmid5 footerbox">
+<a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+	<p>Reading Buses is a bus operator serving</p>
+	<p>the towns of Reading, Bracknell,</p>
+	<p>Newbury, Slough, Windsor, Wokingham</p>
+	<p>and the surrounding area in the county</p>
+	<p>of Berkshire, England, as well as </p>
+	<p>parts of Greater London.</p>
+</div>
+<div class="colmid5 footerbox">
+	<p><b></b></p>
+</div>
+<div class="colmid5 footerbox">
+	<p><b></b></p>
+</div>
+<div class="colmid5 footerbox">
+	<p><b></b></p>
+</div>
+<div class="colmid5 footerbox">
+	<p><b></b></p>
+</div>
+<div class="colmid5 footerbox">
+	<p><b></b></p>
+</div>
+<div class="colmid5 footerbox">
+	<p><b>Contact Us</b></p>
+	<i class="fa fa-globe fa-lg"></i><p>Reading Buses
+Great Knollys Street
+Reading
+RG1 7HH</p>
+	<i class="fa fa-phone fa-lg"></i><p>0118 959 4000</p>
+	<i class="fa fa-envelope fa-lg"></i><p>customerservices@reading-buses.co.uk</p>
+</div>
+
+
+</div>
+
+</section>
+</body>
+</html>
