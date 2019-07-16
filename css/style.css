@@ -76,6 +76,12 @@ h5 {
   }
 }
 
+.carddeck2
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .lineimg
 {
 	margin-top: -17px;
@@ -142,7 +148,10 @@ h5 {
 	text-align: center;
 	color:antiquewhite
 }
-
+.buttonclass2
+{
+    background-color: linear-gradient(to right, #6c5ce7, #c73543);
+}
 .logomain
 {
 	width: 50px;
@@ -168,7 +177,8 @@ button.btn.btn-primary
     display: block;
     max-width: 500px;
     margin: auto;
-	background-image: linear-gradient(to right, #6c5ce7, #c73543);
+    margin-bottom: 20px;
+	background-image: linear-gradient(to right, #3498db, #3498db);
 }
 #mainabout
 {

@@ -6,6 +6,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
 #myInput {
   background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
@@ -15,6 +16,8 @@
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
+    
+    
 }
 
 #myUL {
@@ -22,6 +25,8 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 #myUL li a {
@@ -33,6 +38,7 @@
   font-size: 18px; /* Increase the font-size */
   color: black; /* Add a black text color */
   display: block; /* Make it into a block element to fill the whole list */
+    
 }
 
 #myUL li a:hover:not(.header) {
@@ -43,6 +49,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: comfortaa;
+    
 }
 @font-face {
   font-family: comfortaa;
@@ -104,13 +111,15 @@ body
 .maintitle {
     font-size: 50px;
     font-weight: 600;
-    margin-top: 34px;
+    margin-top: 57px;
+    margin-bottom: 22px;
     text-align: center;
     text-shadow: 1.5px 1.5px #34495e;
+    color: #fff;
 }
-.maintext
-{
-	text-align: center;
+.maintext {
+    text-align: center;
+    margin-bottom: -15px;
 }
 
 .logomain
@@ -258,14 +267,12 @@ function myFunction() {
 <div class="container">
 <p class="maintitle">Reading Buses</p>
 <p class="maintext">Select your bus below.</p>	
+    
 </div>
 </div>
+    <img src="images/wave1.png" class="bottomimg" alt="Wave">
 </section>
-
-<section id="about1">
-<p> </p>
-</section>
-	
+	<section id="search2">
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a bus:">
 
 <ul id="myUL">
@@ -336,7 +343,7 @@ function myFunction() {
 	<li><a href="#">tv6</a></li>
 	
 </ul>
-
+</section>
 
 <section id="mainfooter">
 <div class="container">
