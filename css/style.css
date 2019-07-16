@@ -35,6 +35,10 @@ body
 {
 	font-family: font;
 }
+.card-deck .card a {
+    text-decoration: none
+}
+
 #navigation-bar
 {
 	position: sticky;
@@ -204,17 +208,6 @@ button.btn.btn-primary
 {
 	width: 120px;
 	margin-bottom: 20px;
-}
-.footerbox .fa
-{
-    margin-right: 8px;
-    font-size: 25px;
-    height: 1px;
-    width: 25px;
-    margin-left: -30px;
-    text-align: center;
-    padding-top: 7px;
-    border-radius: 2px;
 }
 hr
 {
