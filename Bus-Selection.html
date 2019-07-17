@@ -6,6 +6,29 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    $.ajax({
+        url: "reading-buses.cf/get_all_stops",
+		method: "GET",
+		jsonp: true,
+		dataType: "json",
+		crossDomain: true,
+		headers: {"Access-Control-Allow-Origin" : "*"},
+		success: function (json) {
+
+			console.log("Success");
+            // <li><a href="Jetblack.html">Jetblack - Newbury to Reading</a></li>
+            a = "";
+            for (i = 0; i < json.length; i++) {
+                console.log(json[i].description);
+                a = a + "<li><a onclick = 'BusInfo(" + i.toString() +")'> " + json[i].description + "</a></li>"
+            }
+
+            document.getElementById("myUL").innerHTML = a;
+		},
+		error: function (res) { console.log("Fail"); }
+    })
+</script>
 <style>
 
 #myInput {
@@ -17,8 +40,8 @@
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
-    
-    
+
+
 }
 
 #myUL {
@@ -39,7 +62,7 @@
   font-size: 18px; /* Increase the font-size */
   color: black; /* Add a black text color */
   display: block; /* Make it into a block element to fill the whole list */
-    
+
 }
 
 #myUL li a:hover:not(.header) {
@@ -50,7 +73,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: comfortaa;
-    
+
 }
 @font-face {
   font-family: comfortaa;
@@ -179,7 +202,7 @@ h5 {
 {
 	width: 100%;
 }
-button.btn.btn-primary 
+button.btn.btn-primary
 {
     display: block;
     max-width: 500px;
@@ -285,7 +308,7 @@ function myFunction() {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Service.html">Service Updates</a>
-      </li>	
+      </li>
     </ul>
   </div>
 </nav>
@@ -294,8 +317,8 @@ function myFunction() {
 <section id="mainbanner">
 <div class="container">
 <p class="maintitle">Reading Buses</p>
-<p class="maintext">Select your bus below.</p>	
-    
+<p class="maintext">Select your bus below.</p>
+
 </div>
 </div>
     <img src="images/wave1.png" class="bottomimg" alt="Wave">
@@ -369,7 +392,7 @@ function myFunction() {
 	<li><a href="#">tv4</a></li>
 	<li><a href="#">tv5</a></li>
 	<li><a href="#">tv6</a></li>
-	
+
 </ul>
 </section>
 
