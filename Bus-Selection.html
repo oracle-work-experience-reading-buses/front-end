@@ -6,6 +6,27 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    $.ajax({
+        url: "reading-buses.cf/get_all_stops",
+		method: "GET",
+		jsonp: true,
+		dataType: "json",
+		crossDomain: true,
+		headers: {"Access-Control-Allow-Origin" : "*"},
+		success: function (json) {
+			console.log("Success");
+            // <li><a href="Jetblack.html">Jetblack - Newbury to Reading</a></li>
+            a = "";
+            for (i = 0; i < json.length; i++) {
+                console.log(json[i].description);
+                a = a + "<li><a onclick = 'BusInfo(" + i.toString() +")'> " + json[i].description + "</a></li>"
+            }
+            document.getElementById("myUL").innerHTML = a;
+		},
+		error: function (res) { console.log("Fail"); }
+    })
+</script>
 <style>
 
 #myInput {
@@ -158,6 +179,7 @@ h5 {
 .maintext {
     text-align: center;
     margin-bottom: -15px;
+    color: #fff;
 }
 
 .logomain
@@ -271,13 +293,17 @@ function myFunction() {
 
 <section id="navigation-bar">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="nav-item active"></a>
   <a class="navbar-logo" href="index.html"><img src="images/logo.png" alt="Logo"></a>
+
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
    <i class="fa fa-bars" alt="Bars"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
+	
+	<li>
         <a class="nav-link" href="Bus-Selection.html">Bus Selection</a>
       </li>
       <li class="nav-item">
@@ -290,6 +316,7 @@ function myFunction() {
   </div>
 </nav>
 </section>
+
 
 <section id="mainbanner">
 <div class="container">
