@@ -31,7 +31,7 @@ $.ajax({
 })
 
 function BusInfo(i) {
-    var js = busJson[parsInt(i.toNumber, 10)];
+    var js = busJson[parseInt(i.toNumber, 10)];
     document.getElementById("mapStuff").innerHTML = '<iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=' + js.latitude + '%2C' + js.longitude + '&key=AIzaSyBQpJezHUl6x8c4zoQBSFF-SarNWJ5rlG0" allowfullscreen></iframe>';
 }
 
@@ -55,11 +55,6 @@ function BusInfo(i) {
   list-style-type: none;
   padding-left: 10px;
   margin-right: 10px;
-}
-
-#SEARCH {
-  /* Remove default list styling */
-  padding: 10px;
 }
 
 #myUL li a {
@@ -393,23 +388,21 @@ function myFunction() {
 
 
 <section id="search2">
-    <div class = "row">
+    <div class = "row" id="hax">
         <div class= "col-lg-4">
             <div id="SEARCH">
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a bus stop:">
             </div>
-        <ul id="myUL">
-            <div id = "boxsl">
-            <img class = "spin" src="images/loading.png" width="100" height="100" alt="Logo">
 
-            </div>
-        </ul>
+            <ul id="myUL">
+                <div id = "boxsl">
+                    <img class = "spin" src="images/loading.png" width="100" height="100" alt="Logo">
+                </div>
+            </ul>
         </div>
-        <div class= "col-lg-8">
+        <div class= "col-lg-4">
             <div class="map-responsive" id ="mapStuff">
-                <iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=51.449401%2C-0.938002&key=AIzaSyBQpJezHUl6x8c4zoQBSFF-SarNWJ5rlG0" allowfullscreen></iframe>
-                !<!--<iframe src="https://www.google.com/maps/embed?pb=51.449401%2C-0.938002" width="600px" height="445px" frameborder="0" style="border:0" allowfullscreen></iframe>
-                -->
+                <iframe width="500" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=51.449401%2C-0.938002&key=AIzaSyBQpJezHUl6x8c4zoQBSFF-SarNWJ5rlG0"></iframe>
             </div>
         </div>
     </div>
@@ -460,4 +453,3 @@ RG1 7HH</p>
 
 </body>
 </html>
-Shared in

@@ -3,12 +3,14 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
     $.ajax({
-        url: "reading-buses.cf/get_all_stops",
+        url: "https://reading-buses.cf/get_all_stops",
 		method: "GET",
 		jsonp: true,
 		dataType: "json",
@@ -38,18 +40,15 @@
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
-    
-    
 }
 
 #myUL {
   /* Remove default list styling */
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-    margin-left: 15px;
-    margin-right: 15px;
+  padding-left: 10px;
+  margin-right: 10px;
 }
+
 
 #myUL li a {
   border: 1px solid #ddd; /* Add a border to all links */
@@ -60,7 +59,6 @@
   font-size: 18px; /* Increase the font-size */
   color: black; /* Add a black text color */
   display: block; /* Make it into a block element to fill the whole list */
-    
 }
 
 #myUL li a:hover:not(.header) {
@@ -71,7 +69,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: comfortaa;
-    
+
 }
 @font-face {
   font-family: comfortaa;
@@ -201,7 +199,7 @@ h5 {
 {
 	width: 100%;
 }
-button.btn.btn-primary 
+button.btn.btn-primary
 {
     display: block;
     max-width: 500px;
@@ -259,6 +257,13 @@ a.btn.btn-primary {
 {
 	text-align: center;
 }
+#boxsl {
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
+    margin: 0px auto 0 auto;
+}
 #buses
 {
 	margin-left: 20px;
@@ -302,7 +307,7 @@ function myFunction() {
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
-	
+
 	<li>
         <a class="nav-link" href="Bus-Selection.html">Bus Selection</a>
       </li>
@@ -311,7 +316,7 @@ function myFunction() {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Service.html">Service Updates</a>
-      </li>	
+      </li>
     </ul>
   </div>
 </nav>
@@ -321,83 +326,30 @@ function myFunction() {
 <section id="mainbanner">
 <div class="container">
 <p class="maintitle">Reading Buses</p>
-<p class="maintext">Select your bus below.</p>	
-    
+<p class="maintext">Select your bus below.</p>
+
 </div>
 </div>
     <img src="images/wave1.png" class="bottomimg" alt="Wave">
 </section>
-	<section id="search2">
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a bus:">
+<section id="search2">
+    <div class = "row" id="hax">
+        <div class= "col-lg-4">
+            <div id="SEARCH">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a bus:">
+            </div>
 
-<ul id="myUL">
-  	<li><a href="Jetblack.html">Jetblack - Newbury to Reading</a></li>
-  	<li><a href="#">2, 2a</a></li>
-  	<li><a href="#">3, 3b, 10</a></li>
-  	<li><a href="#">4, X4</a></li>
+            <ul id="myUL">
+                <div id = "boxsl">
+                    <img class="spin" src="images/loading.png" width="100" height="100" alt="Logo">
+                </div>
+            </ul>
+        </div>
+        <div class= "col-lg-4">
 
-  	<li><a href="#">5</a></li>
-  	<li><a href="#">6, 6a</a></li>
-    <li><a href="#">7</a></li>
-    <li><a href="#">9</a></li>
-    <li><a href="#">11</a></li>
-	<li><a href="#">13</a></li>
-	<li><a href="#">14</a></li>
-	<li><a href="#">15, 15T, 15a</a></li>
-	<li><a href="#">16, 16S</a></li>
-	<li><a href="#">17</a></li>
-	<li><a href="#">19a</a></li>
-	<li><a href="#">19b</a></li>
-	<li><a href="#">19c</a></li>
-	<li><a href="#">21,21a</a></li>
-	<li><a href="#">22, 22S</a></li>
-	<li><a href="#">23, 23S</a></li>
-	<li><a href="#">24</a></li>
-	<li><a href="#">25, 25S</a></li>
-	<li><a href="#">26, 26L, 26T </a></li>
-	<li><a href="#">27, 29</a></li>
-	<li><a href="#">28S</a></li>
-	<li><a href="#">33, 33S</a></li>
-	<li><a href="#">Greenwave 40</a></li>
-	<li><a href="#">42, 42a</a></li>
-	<li><a href="#">42x</a></li>
-	<li><a href="#">Greenwave 50</a></li>
-	<li><a href="#">Greenwave 50a</a></li>
-	<li><a href="#">Greenwave 50b</a></li>
-	<li><a href="#">Greenwave 51</a></li>
-	<li><a href="#">Greenwave 52</a></li>
-	<li><a href="#">Greenwave 52a</a></li>
-	<li><a href="#">Greenwave 52b</a></li>
-	<li><a href="#">Greenwave 53</a></li>
-	<li><a href="#">Greenwave 53a</a></li>
-	<li><a href="#">Greenwave 53b</a></li>
-	<li><a href="#">Greenwave 53x</a></li>
-	<li><a href="#">Greenwave 60</a></li>
-	<li><a href="#">Greenwave 52b</a></li>
-	<li><a href="#">Greenwave 52b</a></li>
-	<li><a href="#">Greenwave 52b</a></li>
-	<li><a href="#">Greenwave 52b</a></li>
-	<li><a href="#">Greenwave 52b</a></li>
-	<li><a href="#">Greenwave 53,53a,53b,53x</a></li>
-	<li><a href="#">Greenwave 60,60a,60b,60c,60e,60m,60x</a></li>
-	<li><a href="#">62</a></li>
-	<li><a href="#">Greenwave 62a</a></li>
-	<li><a href="#">Greenwave 63</a></li>
-	<li><a href="#">66</a></li>
-	<li><a href="#">145</a></li>
-	<li><a href="#">151</a></li>
-	<li><a href="#">152</a></li>
-	<li><a href="#">153</a></li>
-	<li><a href="#">304</a></li>
-	<li><a href="#">500</a></li>
-	<li><a href="#">702,703</a></li>
-	<li><a href="#">981</a></li>
-	<li><a href="#">X3</a></li>
-	<li><a href="#">tv4</a></li>
-	<li><a href="#">tv5</a></li>
-	<li><a href="#">tv6</a></li>
-	
-</ul>
+        </div>
+    </div>
+
 </section>
 
 <section id="mainfooter">
