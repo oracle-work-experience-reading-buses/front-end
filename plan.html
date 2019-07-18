@@ -7,6 +7,36 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+var busJson;
+$.ajax({
+    url: "https://reading-buses.cf/get_all_stops",
+    method: "GET",
+    jsonp: true,
+    dataType: "json",
+    crossDomain: true,
+    headers: {"Access-Control-Allow-Origin" : "*"},
+    success: function (json) {
+        busJson = json;
+        console.log("Success");
+        // <li><a href="Jetblack.html">Jetblack - Newbury to Reading</a></li>
+        a = "";
+        for (i = 0; i < json.length; i++) {
+            console.log(json[i].description);
+            a = a + "<li><a onclick = 'BusInfo(" + i.toString() +")'> " + json[i].description + "</a></li>"
+        }
+        document.getElementById("myUL").innerHTML = a;
+    },
+    error: function (res) { console.log("Fail"); }
+})
+
+function BusInfo(i) {
+    var js = busJson[parsInt(i.toNumber, 10)];
+    document.getElementById("mapStuff").innerHTML = '<iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=' + js.latitude + '%2C' + js.longitude + '&key=AIzaSyBQpJezHUl6x8c4zoQBSFF-SarNWJ5rlG0" allowfullscreen></iframe>';
+}
+
+</script>
+
 <style>
 #myInput {
   background-image: url('/css/searchicon.png'); /* Add a search icon to input */
@@ -15,6 +45,7 @@
   width: 100%; /* Full-width */
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
+  padding-left: 10px;
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
@@ -22,8 +53,13 @@
 #myUL {
   /* Remove default list styling */
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+#SEARCH {
+  /* Remove default list styling */
+  padding: 10px;
 }
 
 #myUL li a {
@@ -149,7 +185,9 @@ body
 	padding-top: 5%;
 }
 
-
+#column_25 {
+    width: 25%;
+}
 .maintitle {
     font-size: 50px;
     font-weight: 600;
@@ -189,7 +227,7 @@ body
 {
 	width: 100%;
 }
-button.btn.btn-primary 
+button.btn.btn-primary
 {
     display: block;
     max-width: 500px;
@@ -308,6 +346,7 @@ function myFunction() {
     }
   }
 }
+
 </script>
 <meta charset="utf-8">
 <title>Reading Buses</title>
@@ -326,7 +365,7 @@ function myFunction() {
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
-	
+
 	<li>
         <a class="nav-link" href="Bus-Selection.html">Bus Selection</a>
       </li>
@@ -335,7 +374,7 @@ function myFunction() {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Service.html">Service Updates</a>
-      </li>	
+      </li>
     </ul>
   </div>
 </nav>
@@ -345,140 +384,43 @@ function myFunction() {
 <section id="mainbanner">
 <div class="container">
 <p class="maintitle">Plan Your Journey</p>
-<p class="maintext">Select your bus stop below.</p>	
-    
+<p class="maintext">Select your bus stop below.</p>
+
 </div>
 </div>
     <img src="images/wave1.png" class="bottomimg" alt="Wave">
 </section>
 
-	
-	<section id="search2">
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a bus stop:">
 
-<ul id="myUL">
-  	<li><a href="#">Adbury turn adj</a></li>
-<li><a href="#">Adbury turn opp</a></li>
-<li><a href="#">Albert Close N-bound</a></li>
-<li><a href="#">Albert Close S-bound</a></li>
-<li><a href="#">Aldermaston Station opp</a></li>
-<li><a href="#">Arlington Business Park on</a></li>
-<li><a href="#">Ash Road N-bound</a></li>
-<li><a href="#">Ash Road S-bound</a></li>
-<li><a href="#">Avon Way adj</a></li>
-<li><a href="#">Beenham Turn Adj</a></li>
-<li><a href="#">Beenham Turn SW-bound</a></li>
-<li><a href="#">Berkeley Avenue adj</a></li>
-<li><a href="#">Berkeley Avenue opp</a></li>
-<li><a href="#">Berkshire Arms PH opp</a></li>
-<li><a href="#">Birchwood Road Opp</a></li>
-<li><a href="#">Birchwood Road adj</a></li>
-<li><a href="#">Bishops Green Turn S-bound</a></li>
-<li><a href="#">Bishops Green Turn adj</a></li>
-<li><a href="#">Bishops Green Turn opp</a></li>
-<li><a href="#">Blagrave Street stop EP</a></li>
-<li><a href="#">Bourne Road adj</a></li>
-<li><a href="#">Brewery Court adj</a></li>
-<li><a href="#">Brewery Court opp</a></li>
-<li><a href="#">Calcot Hotel adj</a></li>
-<li><a href="#">Calcot Mill Lane Opp</a></li>
-<li><a href="#">Calcot Mill Lane adj</a></li>
-<li><a href="#">Calcot Mill Lane inside</a></li>
-<li><a href="#">Castle Street stop CQ</a></li>
-<li><a href="#">Cheapside Stop CV</a></li>
-<li><a href="#">Circuit Lane E-bound</a></li>
-<li><a href="#">Coach and Horses PH Adj</a></li>
-<li><a href="#">Cods Hill adj</a></li>
-<li><a href="#">Cods Hill opp</a></li>
-<li><a href="#">Coffee Exchange nr</a></li>
-<li><a href="#">Collins Caravan Centre adj</a></li>
-<li><a href="#">Collins Caravan Centre opp</a></li>
-<li><a href="#">Colthrop Lane adj</a></li>
-<li><a href="#">Cresswell Road adj</a></li>
-<li><a href="#">Cresswell Road opp</a></li>
-<li><a href="#">Croft Road adj</a></li>
-<li><a href="#">Croft Road opp</a></li>
-<li><a href="#">Deadmans Lane adj</a></li>
-<li><a href="#">Deadmans Lane opp</a></li>
-<li><a href="#">Downshire Square adj</a></li>
-<li><a href="#">Downshire Square opp</a></li>
-<li><a href="#">Engineers Road opp</a></li>
-<li><a href="#">Falkland Memorial E-bound</a></li>
-<li><a href="#">Falmouth Way Top opp</a></li>
-<li><a href="#">Fir Tree Primary School adj</a></li>
-<li><a href="#">Fir Tree Primary School opp</a></li>
-<li><a href="#">First Street adj</a></li>
-<li><a href="#">First Street opp</a></li>
-<li><a href="#">Four Oaks adj</a></li>
-<li><a href="#">Four Oaks opp</a></li>
-<li><a href="#">Friar Street stop FP</a></li>
-<li><a href="#">Golf Club West Gate adj</a></li>
-<li><a href="#">Golf Club West Gate opp</a></li>
-<li><a href="#">Greenwood Road adj</a></li>
-<li><a href="#">Greenwood Road opp</a></li>
-<li><a href="#">Harts Hill Foot opp</a></li>
-<li><a href="#">Highcroft Kennels Adj</a></li>
-<li><a href="#">Honey End Lane Adj</a></li>
-<li><a href="#">Honey End Lane opp 94</a></li>
-<li><a href="#">Kettering Close Adj</a></li>
-<li><a href="#">Knollmead Opp</a></li>
-<li><a href="#">Lima Court Adj</a></li>
-<li><a href="#">Marlow Place N-bound</a></li>
-<li><a href="#">Mayfield Avenue adj</a></li>
-<li><a href="#">Mayfield Avenue opp</a></li>
-<li><a href="#">Midgham Kennels adj</a></li>
-<li><a href="#">Midgham Kennels opp</a></li>
-<li><a href="#">Monks Lane Surgery nr</a></li>
-<li><a href="#">Monks Lane east on</a></li><li><a href="#">Newtown Roundabout Eastbound</a></li>
-<li><a href="#">Newtown Roundabout Westbound</a></li>
-<li><a href="ppa.html">Palmer Park Adj</a></li>
-<li><a href="#">Parkside Road adj</a></li>
-<li><a href="#">Pemberton Gardens Adj</a></li>
-<li><a href="#">Pinchington Lane Roundabout N-bound</a></li>
-<li><a href="#">Pinchington Lane Roundabout S-bound</a></li>
-<li><a href="#">Russell Street on</a></li>
-<li><a href="#">Russell Street opp 6</a></li>
-<li><a href="#">Siege Cross Roundabout E-bound</a></li>
-<li><a href="#">Siege Cross Roundabout W-bound</a></li>
-<li><a href="#">South Lodge opp</a></li>
-<li><a href="#">Southcote Road E-bound</a></li>
-<li><a href="#">Southcote Road W-bound</a></li>
-<li><a href="#">Spring Inn PH NE-bound</a></li>
-<li><a href="#">Spring Inn PH Opp</a></li>
-<li><a href="#">St Gabriels School Adj</a></li>
-<li><a href="#">St Gabriels School Opp</a></li>
-<li><a href="#">St Marys Butts stop CA</a></li>
-<li><a href="#">Station Road Stop SD</a></li>
-<li><a href="#">TVSP Gateway adj</a></li>
-<li><a href="#">The Angel PH Adj</a></li>
-<li><a href="#">The Angel PH opp</a></li>
-<li><a href="#">The Crown PH Adj</a></li>
-<li><a href="#">The Gables adj</a></li>
-<li><a href="#">The Gables opp</a></li>
-<li><a href="#">The Green adj</a></li>
-<li><a href="#">The Green opp</a></li>
-<li><a href="#">The Plough PH adj</a></li>
-<li><a href="#">The Plough PH opp</a></li>
-<li><a href="#">Theale Green School adj</a></li>
-<li><a href="#">Theale Green School opp</a></li>
-<li><a href="#">Torcross Grove Adj</a></li>
-<li><a href="#">Valley Road Crescent by</a></li>
-<li><a href="#">Venture West adj</a></li>
-<li><a href="#">Victoria Lodge Opp</a></li>
-<li><a href="#">Watson Technology Centre adj</a></li>
-<li><a href="#">Watson Technology Centre opp</a></li>
-<li><a href="#">Waylen Street Opp</a></li>
-<li><a href="#">Wigmore Lane adj</a></li>
-<li><a href="#">Wigmore Lane opp</a></li>
-	
-</ul>
+<section id="search2">
+    <div class = "row">
+        <div class= "col-lg-4">
+            <div id="SEARCH">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a bus stop:">
+            </div>
+        <ul id="myUL">
+            <div id = "boxsl">
+            <img class = "spin" src="images/loading.png" width="100" height="100" alt="Logo">
 
+            </div>
+        </ul>
+        </div>
+        <div class= "col-lg-8">
+            <div class="map-responsive" id ="mapStuff">
+                <iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=51.449401%2C-0.938002&key=AIzaSyBQpJezHUl6x8c4zoQBSFF-SarNWJ5rlG0" allowfullscreen></iframe>
+                !<!--<iframe src="https://www.google.com/maps/embed?pb=51.449401%2C-0.938002" width="600px" height="445px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                -->
+            </div>
+        </div>
+    </div>
+
+    </section>
 
 <section id="mainfooter">
 <div class="container">
 <div class="row">
 <div class="colmid5 footerbox">
-<a href="index.html"><img src="logo.png" alt="Logo"></a>
+<a href="index.html"><img src="images/logo.png" alt="Logo"></a>
 	<p>Reading Buses is a bus operator serving</p>
 	<p>the towns of Reading, Bracknell,</p>
 	<p>Newbury, Slough, Windsor, Wokingham</p>
