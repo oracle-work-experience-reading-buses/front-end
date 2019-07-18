@@ -9,6 +9,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
+
+    var busesJson;
     $.ajax({
         url: "https://reading-buses.cf/get_bus_positions",
 		method: "GET",
@@ -20,6 +22,7 @@
 			console.log("Success");
             // <li><a href="Jetblack.html">Jetblack - Newbury to Reading</a></li>
             a = "";
+            busesJson = json
             for (i = 0; i < json.length; i++) {
                 if (json[i].service == "") {
                     continue;
