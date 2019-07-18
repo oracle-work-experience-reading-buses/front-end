@@ -54,6 +54,7 @@ body
 	top: 0;
 	z-index: 10;
 }
+
 @media only screen and (max-width: 768px) {
   p {
     font-size: 20px;
@@ -101,7 +102,16 @@ h5 {
     width: 100%;
     height: 100%;
 }
-
+.navbar-nav li a:hover {
+    color: #D8D8D8!important;
+    transition: all 0.5s;
+}
+#navigation-bar
+{
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
 .navbar
 {
 	background-image: linear-gradient(to right, #6c5ce7, #c73543);
@@ -123,12 +133,11 @@ h5 {
 }
 .navbar-nav li a
 {
-	color: #fff;
+	color: #fff !important;
 	font-weight: 600;
 	float: right;
 	text-align: left;
 }
-
 .fa-bars
 {
 	color: #fff;
@@ -324,7 +333,18 @@ a.btn.btn-primary {
     max-width: 100%;
     width: 100%;
 }
+.card-deck .card a {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    background-color: #3498db;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
 
+}
+.card-deck .card a:hover {background-color:#2980b9}
 
 .spin {
 	-webkit-animation-name: spin;
