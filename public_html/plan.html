@@ -31,9 +31,42 @@ $.ajax({
 })
 
 function BusInfo(i) {
+    console.log( parseInt(i.toNumber, 10) );
     var js = busJson[parseInt(i.toNumber, 10)];
+    console.log("Test!")
     console.log(JSON.stringify(js));
     document.getElementById("mapStuff").innerHTML = '<iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=' + js.latitude + '%2C' + js.longitude + '&key=AIzaSyBQpJezHUl6x8c4zoQBSFF-SarNWJ5rlG0" allowfullscreen></iframe>';
+
+    $.ajax({
+        url: "https://reading-buses.cf/get_service_times",
+        method: "GET",
+        jsonp: true,
+        dataType: "json",
+        data = {
+            "nat_code" : js["location_code"]
+        },
+        crossDomain: true,
+        headers: {"Access-Control-Allow-Origin" : "*"},
+        success: function (json) {
+            var b = "<tr>"
+            // loop through buses
+            // loop through times
+            // Something
+            for (i=0; i < json.length; i++) {
+                b = b + "<th>" + json[i][0] + "</th>"
+            }
+            b = b + "</tr> <tr>"
+
+            for (i = 0; i < json.length; i++) {
+                b = b + "<th>" + json[i][1] + "</th>"
+            }
+
+            b = b + "</tr>"
+            b = '<table id ="test3">' + b + '</table>'
+            document.getElementById("mapStuff").innerHTML = b + document.getElementById("mapStuff").innerHTML;
+        },
+        error: function (res) { console.log("Fail"); }
+    })
 }
 
 </script>
