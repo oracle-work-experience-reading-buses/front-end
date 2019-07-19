@@ -31,8 +31,8 @@ $.ajax({
 })
 
 function BusInfo(i) {
-    console.log( parseInt(i.toNumber, 10) );
-    var js = busJson[parseInt(i.toNumber, 10)];
+    console.log( parseInt(i, 10) );
+    var js = busJson[parseInt(i, 10)];
     console.log("Test!")
     console.log(JSON.stringify(js));
     document.getElementById("mapStuff").innerHTML = '<iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=' + js.latitude + '%2C' + js.longitude + '&key=AIzaSyBQpJezHUl6x8c4zoQBSFF-SarNWJ5rlG0" allowfullscreen></iframe>';
