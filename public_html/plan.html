@@ -42,8 +42,8 @@ function BusInfo(i) {
         method: "GET",
         jsonp: true,
         dataType: "json",
-        data = {
-            "nat_code" : js["location_code"]
+        data : {
+            "nat_code" : js["location_code"],
         },
         crossDomain: true,
         headers: {"Access-Control-Allow-Origin" : "*"},
