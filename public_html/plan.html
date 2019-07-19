@@ -10,7 +10,7 @@
 <script>
 var busJson;
 $.ajax({
-    url: "https://reading-buses.cf/get_all_stops",
+    url: "/rest/get_all_stops",
     method: "GET",
     jsonp: true,
     dataType: "json",
@@ -38,7 +38,7 @@ function BusInfo(i) {
     document.getElementById("mapStuff").innerHTML = '<iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=' + js.latitude + '%2C' + js.longitude + '&key=AIzaSyBQpJezHUl6x8c4zoQBSFF-SarNWJ5rlG0" allowfullscreen></iframe>';
 
     $.ajax({
-        url: "https://reading-buses.cf/get_service_times",
+        url: "/rest/get_service_times",
         method: "GET",
         jsonp: true,
         dataType: "json",

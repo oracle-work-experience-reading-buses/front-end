@@ -16,7 +16,7 @@ spec:
     spec: 
       containers: 
         - 
-          image: "lhr.ocir.io/aiapps/buses/apache:1.0.0"
+          image: "lhr.ocir.io/aiapps/buses/apache:1.0.1"
           imagePullPolicy: Always
           name: apache-image
           ports: 
