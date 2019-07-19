@@ -53,14 +53,14 @@ function BusInfo(i) {
             // loop through buses
             // loop through times
             // Something
-            for (i=0; i < json.length; i++) {
+            for (var key in json) {
                 c = i.toString();
-                b = b + "<th>" + json[c][0] + "</th>"
+                b = b + "<th>" + json[key][0] + "</th>"
             }
             b = b + "</tr> <tr>"
 
-            for (i = 0; i < json.length; i++) {
-                b = b + "<th>" + json[c][1] + "</th>"
+            for (var key in json) {
+                b = b + "<th>" + json[key][1] + "</th>"
             }
 
             b = b + "</tr>"
