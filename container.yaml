@@ -1,0 +1,42 @@
+--- 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata: 
+  name: apache-image
+  namespace: default
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels: 
+      run: apache-image
+  template: 
+    metadata: 
+      labels: 
+        run: apache-image
+    spec: 
+      containers: 
+        - 
+          image: "lhr.ocir.io/aiapps/buses/apache:1.0.0"
+          imagePullPolicy: Always
+          name: apache-image
+          ports: 
+            - 
+              containerPort: 8080
+      imagePullSecrets: 
+        - 
+          name: ocirsecret2
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apache-service
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: apache-image
+  type: ClusterIP
+
